@@ -35,7 +35,7 @@ int ** readMatrix(const char * filename, int* r, int* c)
         printf("Could not read rows and columns\n");
         exit(1);
     }
-    printf("row: %d\tcol: %d\n", tempR, tempC);
+    //printf("row: %d\tcol: %d\n", tempR, tempC);
     *r = tempR;
     *c = tempC;
 
@@ -52,5 +52,19 @@ int ** readMatrix(const char * filename, int* r, int* c)
         }
     }
     return mat;
+}
+
+int** transpose(int** mat, int r, int c) {
+    int** tr = (int**)malloc(c * sizeof(int*));
+    for(int i = 0; i < c; i++) {
+        tr[i] = (int*)malloc(r * sizeof(int));
+    }
+
+    for(int i = 0; i < c; i++) {
+        for(int j = 0; j < r; j++) {
+            tr[i][j] = mat[j][i];
+        }
+    }
+    return tr;
 }
 #endif
