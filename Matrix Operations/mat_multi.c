@@ -86,7 +86,7 @@ int main(int argc, char ** argv) {
         MPI_Recv(&offset, 1, MPI_INT, 0, 1, MPI_COMM_WORLD, &status); // receive the offset
         MPI_Recv(&rowA, 1, MPI_INT, 0, 10, MPI_COMM_WORLD, &status);    // receive the number of rows
         MPI_Recv(&colA, 1, MPI_INT, 0, 11, MPI_COMM_WORLD, &status);   // receive the number of columns
-        subRowA = (int*)malloc(rowA * colA * sizeof(int));
+        //subRowA = (int*)malloc(rowA * colA * sizeof(int));
         
         // TODO: Receive the sub arrays
         

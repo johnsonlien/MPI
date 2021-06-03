@@ -1,0 +1,1 @@
+This folder will implement the different methods of parallelizing matrix multiplications [found in this powerpoint](https://edoras.sdsu.edu/~mthomas/sp17.605/lectures/MPI-MatMatMult.pdf).
